@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import DashboardAdmin from '../views/DashboardAdmin.vue'
 import EditionScenario from '../views/EditionScenario.vue'
 import Inscription from '../views/Inscription.vue'
+import UserProfil from '../views/UserProfil.vue'
 import Connexion from '../views/Connexion.vue'
 
 const router = createRouter({

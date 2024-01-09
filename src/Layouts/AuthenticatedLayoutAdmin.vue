@@ -6,9 +6,9 @@
                     <div class="flex justify-between h-16">
                         <div class="flex items-center">
                             <div class="shrink-0 flex items-center">
-                                <button>
+                                <router-link :to="{name: 'dashboard'}">
                                     ChatBot
-                                </button>
+                                </router-link>
                             </div>
                         </div>
 
@@ -23,8 +23,8 @@
                                         </button>
                                         <div v-if="showUserDropdown"
                                             class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg">
-                                            <button
-                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</button>
+                                            <router-link :to="{name: 'profil'}"
+                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</router-link>
                                             <form method="post" as="button" @submit.prevent="logout">
                                                 <button type="submit"
                                                     class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Déconnexion</button>
@@ -68,7 +68,8 @@
                         </div>
 
                         <div class="mt-3 space-y-1">
-                            <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</button>
+                            <router-link :to="{name: 'connexion'}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</router-link>
+                            
                             <form method="post" as="button" @submit.prevent="logout">
                                 <button type="submit"
                                     class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Déconnexion</button>
