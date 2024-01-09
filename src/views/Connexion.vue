@@ -6,21 +6,37 @@
                 <p> <img src="../assets/logo.png" alt="" class="w-20" /> Inscription</p>
             </div>
             <form @submit.prevent="submit" class="mt-6 mb-7">
-                <div>
+
+                <div class="mb-4 relative">
                     <label for="name" class="block text-xl font-medium text-gray-700">
                         Username
                     </label>
-                    <input id="name" type="text" class="mt-3 py-3 p-2 border  border-gray-300 rounded-md block w-full"
-                        v-model="form.userName" required autofocus autocomplete="name" />
+
+                    <div class="mt-3 relative">
+                        <input id="name" type="text" class="py-3 pl-10 pr-3 border border-gray-300 rounded-md block w-full"
+                            v-model="form.userName" required autofocus autocomplete="name" />
+
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <UserIcon class="w-5 h-5 bg-black-100" />
+                        </div>
+                    </div>
                 </div>
 
-                <div class="mt-4">
+
+                <div class="relative">
                     <label for="password" class="block text-xl font-medium text-gray-700">
                         Password
                     </label>
-                    <input id="password" type="password"
-                        class="mt-3 py-3 p-2 border  border-gray-300 rounded-md block w-full" v-model="form.password"
-                        required autocomplete="new-password" />
+
+                    <div class="mt-3 relative">
+                        <input id="password" type="password"
+                            class="py-3 pl-10 pr-3 border border-gray-300 rounded-md block w-full" v-model="form.password"
+                            required autofocus autocomplete="new-password" />
+
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <LockClosedIcon class="w-5 h-5 bg-black-100" />
+                        </div>
+                    </div>
                 </div>
 
                 <div class="flex justify-between mt-6">
@@ -28,7 +44,7 @@
                         <button @click="handleLoginClick" :disabled="isLoading"
                             class="underline cursor-pointer focus:outline-none">
                             {{ isLoading ? 'Chargement...' : 'J\'ai pas de compte' }}
-                           
+
                         </button>
                     </div>
                     <button type="submit" :disabled="isLoading"
@@ -43,6 +59,7 @@
 <script setup>
 import { reactive, ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { UserIcon, LockClosedIcon } from '@heroicons/vue/24/solid'
 
 const isLoading = ref(false);
 const router = useRouter();
