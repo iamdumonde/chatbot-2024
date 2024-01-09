@@ -11,7 +11,7 @@
 
 <style>
   html {
-    background: #f0fef8;
+    background: rgb(243 244 246);
   height: 100%;
 }
 
