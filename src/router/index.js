@@ -3,7 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import DashboardAdmin from '../views/DashboardAdmin.vue'
 import EditionScenario from '../views/EditionScenario.vue'
 import Inscription from '../views/Inscription.vue'
-import Connexion from '../views/EditionScenario.vue'
+import UserProfil from '../views/UserProfil.vue'
+import Connexion from '../views/Connexion.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,13 @@ const router = createRouter({
       name: 'inscription',
       component: Inscription,
     },
+    
+    {
+      path: '/profil',
+      name: 'profil',
+      component: UserProfil,
+    },
+    
  
 
   ]
