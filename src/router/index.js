@@ -40,6 +40,11 @@ const router = createRouter({
       component: Inscription,
     },
 
+    {
+      path: '/profil',
+      name: 'profil',
+      component: UserProfil,
+    },
 
   ]
 })
